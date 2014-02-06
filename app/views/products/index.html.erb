@@ -1,0 +1,11 @@
+<h1>Display All Products</h1>
+
+<%= link_to "Add a New Product", new_product_path %>
+
+
+<%@products.each do |product|%>
+	<p><%= product.name %></p>
+	<p><%= product.description %></p>
+	<p><%= product.price_in_cents %></p>
+	<p><%= link_to image_tag(product.pic_url), product_path(product) %></p>
+<% end %>

@@ -1,4 +1,12 @@
 Dessert::Application.routes.draw do
+
+root 'products#index'
+
+resources :products
+
+resources :users, :execpt => [:index]
+
+resources :sessions , :only => [:new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

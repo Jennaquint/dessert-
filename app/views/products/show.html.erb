@@ -1,0 +1,9 @@
+<h1>Product</h1>
+
+<%= link_to "Back to Products", products_path %> || <%= link_to "Delete", @product, :confirm => "Are you sure you want to delete this?", :method => :delete %>
+
+<p><%= @product[:name] %>!</p>
+<p><%= @product[:description] %>.</p>
+<p><%= image_tag(@product[:pic_url]) %></p> 
+
+<%= link_to "Edit This Photo(be careful)!", edit_product_path(@product) %>
